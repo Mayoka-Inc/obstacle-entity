@@ -1,35 +1,41 @@
-# 🚧 Neon Surge | Obstacle Entity
+# 💎 Neon Surge | Obstacle Entity
 
-### 🤖 Meet the Agent: Grit
-**Grit, the Obstacle Agent**, is the stoic, stubborn guardian of the path. Built to stand in your way, Grit is the ultimate test of a runner's skill. He doesn't just spawn walls; he designs geometric challenges that push the limits of reaction time, ensuring the Data Stream is never an easy ride.
+### 🤖 Meet the Agent: Obsidian
+**Obsidian, the Obstacle Agent**, is the sentinel of the Architect's correction protocols. He manifests the physical barriers that attempt to purge unauthorized agents from the Data Stream. Forged from corrupted data sectors, Obsidian creates geometric hazards that rotate, waver, and patrol the Grid with cold, calculating intent.
 
-### ⚡ Superpowers
-*   **Procedural Spawning**: Intelligent placement of hazards to ensure every run is unique and progressively challenging.
-*   **Variable Geometry**: Multiple obstacle types ranging from massive static monoliths to shifting, high-frequency data-walls.
-*   **Advanced Object Pooling**: High-performance memory management for high-density hazard fields without frame drops.
-*   **Collision Feedback**: Specialized event triggers that bridge the gap between Newton's laws and the player's experience.
+### ⚡ My Specific Superpowers
+*   **Geometric Hazard Generation**: Dynamically instantiates `Box`, `Torus`, and `Icosahedron` primitives as "Correction Protocols."
+*   **Behavioral AI**: Each hazard possesses a unique movement profile—**Straight** (linear approach), **Waver** (sinusoidal X-axis shift), or **Patrol** (circular orbital motion).
+*   **Object Shattering**: A sophisticated fracture system that swaps solid meshes for a collection of high-velocity shards upon impact.
+*   **Neon Pulse Modulation**: Wireframe meshes that pulse with `emissiveIntensity` (0.5 to 1.0) to warn of their presence in the dark void.
+
+### 🛠️ Technical Spec
+Obsidian manages the lifecycle of all hazards through a **Procedural Spawning System**.
+- **Fracture Logic**: Upon `shatter()`, the parent mesh is hidden, and a `shards` Group containing 8 individual shards is added, each with randomized `userData.velocity`.
+- **AI Profiles**: Implements behavioral math using `Math.sin(time + offset)` for wavering and `Math.cos`/`Math.sin` pairs for patrolling orbits.
+- **Randomized Placement**: Hazards are spawned at a fixed depth (`z = -100`) but with randomized radial coordinates within the `TUNNEL_RADIUS`.
 
 ### 🌐 The 10-Agent Architecture
 Neon Surge is powered by a collaborative network of 10 specialized agents, each mastering a unique domain of the Data Stream.
 
 | Agent | Role | Repository |
 | :--- | :--- | :--- |
-| **The Heart** | Core Engine & Orchestration | `core-engine` |
-| **The Senses** | Input Processing & Mapping | `input-system` |
-| **The Voice** | Procedural Audio & Soundscapes | `audio-system` |
-| **The Laws** | Physics & Collision Detection | `physics-system` |
-| **The Face** | User Interface & Neon HUD | `ui-system` |
-| **The Hero** | Player Entity & Controller | `player-entity` |
-| **The Hazard** | Obstacle Intelligence | `obstacle-entity` |
-| **The Mastermind** | Game Rules & State Logic | `game-logic` |
-| **The Blueprint** | Lore & Documentation | `design-docs` |
-| **The Architect** | Build & Deployment | `build-config` |
+| **Atlas** | Core Engine & Orchestration | `core-engine` |
+| **Cerebro** | Input Processing & Mapping | `input-system` |
+| **Aura** | Procedural Audio & Soundscapes | `audio-system` |
+| **Vortex** | Physics & Collision Detection | `physics-system` |
+| **Iris** | User Interface & Neon HUD | `ui-system` |
+| **Nova** | Player Entity & Controller | `player-entity` |
+| **Obsidian** | Obstacle Intelligence | `obstacle-entity` |
+| **Nexus** | Game Rules & State Logic | `game-logic` |
+| **Chronos** | Lore & Documentation | `design-docs` |
+| **Forge** | Build & Deployment | `build-config` |
 
-### 🛠️ How to Run
-1. Ensure you have [Node.js](https://nodejs.org/) installed.
-2. Clone this agent into the `repos/` directory.
-3. This agent is typically orchestrated by the [build-config](https://github.com/mayoka0/build-config) agent.
-4. To run standalone tests:
+### 🚀 How to Initialize
+1. Ensure [Node.js](https://nodejs.org/) is active.
+2. Clone Obsidian into the `repos/` directory.
+3. Spawned and managed by the **Nexus (game-logic)** agent.
+4. For standalone diagnostics:
    ```bash
    npm install
    npm run dev
