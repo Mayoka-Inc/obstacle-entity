@@ -1,4 +1,13 @@
+<div align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=24&pause=1000&color=7aa2f7&center=true&vCenter=true&width=600&lines=Obsidian:+Manifesting+Correction+Protocols...;Forging+Geometric+Hazards...;Neon+Surge+Obsidian+Active." alt="Typing SVG" />
+</div>
+
 # 💎 Neon Surge | Obstacle Entity
+
+### 📊 Agent Telemetry
+<div align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=mayoka0&theme=tokyo-night&hide_border=true&area=true" width="100%" alt="Activity Graph" />
+</div>
 
 ### 🤖 Meet the Agent: Obsidian
 **Obsidian, the Obstacle Agent**, is the sentinel of the Architect's correction protocols. He manifests the physical barriers that attempt to purge unauthorized agents from the Data Stream. Forged from corrupted data sectors, Obsidian creates geometric hazards that rotate, waver, and patrol the Grid with cold, calculating intent.
@@ -10,26 +19,11 @@
 *   **Neon Pulse Modulation**: Wireframe meshes that pulse with `emissiveIntensity` (0.5 to 1.0) to warn of their presence in the dark void.
 
 ### 🛠️ Technical Spec
-Obsidian manages the lifecycle of all hazards through a **Procedural Spawning System**.
-- **Fracture Logic**: Upon `shatter()`, the parent mesh is hidden, and a `shards` Group containing 8 individual shards is added, each with randomized `userData.velocity`.
-- **AI Profiles**: Implements behavioral math using `Math.sin(time + offset)` for wavering and `Math.cos`/`Math.sin` pairs for patrolling orbits.
-- **Randomized Placement**: Hazards are spawned at a fixed depth (`z = -100`) but with randomized radial coordinates within the `TUNNEL_RADIUS`.
+Obsidian manages the lifecycle of all hazards through a sophisticated **Procedural Spawning System** designed to keep the Data Stream unpredictable. Hazards are dynamically instantiated at a fixed depth (`z = -100`) and assigned randomized radial coordinates within the `TUNNEL_RADIUS`. Each hazard is then injected with a specific behavioral profile—**Straight**, **Waver**, or **Patrol**. These profiles utilize trigonometric functions, such as `Math.sin(time + offset)` for oscillatory movement and `Math.cos`/`Math.sin` pairs for orbital patrolling, ensuring that every traversal of the Grid presents a unique challenge.
 
-### 🌐 The 10-Agent Architecture
-Neon Surge is powered by a collaborative network of 10 specialized agents, each mastering a unique domain of the Data Stream.
+When a collision occurs, Obsidian triggers a high-impact **Object Shattering** routine. This system instantly hides the parent mesh and replaces it with a `shards` Group containing eight individual geometric fragments. Each shard is assigned a randomized `userData.velocity` vector, creating an explosion of data that visually represents the destruction of a "Correction Protocol." Furthermore, the wireframe meshes of all active hazards pulse with a modulated `emissiveIntensity` (ranging from 0.5 to 1.0), serving as a visual warning system for the player as they navigate the dark void of the Grid.
 
-| Agent | Role | Repository |
-| :--- | :--- | :--- |
-| **Atlas** | Core Engine & Orchestration | `core-engine` |
-| **Cerebro** | Input Processing & Mapping | `input-system` |
-| **Aura** | Procedural Audio & Soundscapes | `audio-system` |
-| **Vortex** | Physics & Collision Detection | `physics-system` |
-| **Iris** | User Interface & Neon HUD | `ui-system` |
-| **Nova** | Player Entity & Controller | `player-entity` |
-| **Obsidian** | Obstacle Intelligence | `obstacle-entity` |
-| **Nexus** | Game Rules & State Logic | `game-logic` |
-| **Chronos** | Lore & Documentation | `design-docs` |
-| **Forge** | Build & Deployment | `build-config` |
+🔗 **Part of the [Neon Surge Ecosystem](https://github.com/mayoka0/mayoka0#-neon-surge-architecture)**
 
 ### 🚀 How to Initialize
 1. Ensure [Node.js](https://nodejs.org/) is active.
